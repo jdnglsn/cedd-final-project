@@ -55,12 +55,33 @@ git commit -m "docs: update project setup"
 git push origin dev
 ```
 
-Use `feat:` for new functionality, `fix:` for corrections, `docs:` for
-documentation, and `chore:` for repository maintenance. Integration into
-`main` should happen through a reviewed pull request from `dev`.
+Open a pull request from `dev` to integrate changes into `main`.
 
 Do not commit generated binaries, build directories, credentials, or local
 machine configuration. Keep example configuration free of secrets.
+
+### Conventional Commits
+
+Use `type(scope): description`. The scope is optional, as in
+`docs: update the wiring guide`. Start the description with a verb and
+describe one coherent change.
+
+| Type | When to use it | Example |
+| --- | --- | --- |
+| `feat` | Add functionality | `feat(ble): add scroll controls` |
+| `fix` | Correct a bug | `fix(input): debounce the click buttons` |
+| `docs` | Update documentation | `docs: document the MPU6050 wiring` |
+| `refactor` | Restructure code without changing behavior | `refactor(sensor): simplify gyro initialization` |
+| `perf` | Improve performance | `perf(ble): reduce redundant mouse reports` |
+| `test` | Add or update tests | `test(input): cover button release timing` |
+| `build` | Change build tooling or dependencies | `build(arduino): pin the ESP32 core version` |
+| `ci` | Change continuous integration | `ci: add an Arduino compile check` |
+| `style` | Change code formatting only | `style: format the Arduino sketch` |
+| `chore` | Maintain repository files or settings | `chore: update the pull request template` |
+
+For a breaking change, add `!` before the colon, such as
+`feat(input)!: change the default button pins`. Explain what users need to
+change in a `BREAKING CHANGE:` footer.
 
 ## Reference
 
