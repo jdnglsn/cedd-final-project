@@ -1,0 +1,28 @@
+# Arduino / ESP32 generated build files
+build/
+.pio/
+.arduino/
+*.elf
+*.hex
+*.bin
+*.map
+*.o
+*.a
+*.d
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+arduino_secrets.h
+arduino-cli.yaml
+
+# Editor and operating system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
